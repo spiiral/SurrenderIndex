@@ -98,8 +98,3 @@ while(True):
     
         
             
-
-           
-#pbpSoup = pbpSoup.find('table', {'id':"pbp"})
-#pbpSoup = pbpSoup.find('tbody')
-#tr_soup = pbpSoup.find('tr')
