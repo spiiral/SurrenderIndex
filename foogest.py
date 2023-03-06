@@ -39,7 +39,7 @@ while(True):
             num = (i.find("yds_to_go"))
             toGo.append(i[num + 12:num+14])
             num = (i.find("location"))
-            fieldPos.append(i[num+20:num+26])
+            fieldPos.append(i[num+19:num+26])
             num = (i.find("data-stat=\"down\""))
             down.append(i[num+18])
             num = (i.find('.htm'))
@@ -55,6 +55,10 @@ while(True):
         time[i] = time[i].replace(">", "")
         time[i] = time[i].replace("<", "")
         time[i] = time[i].replace("/", "")
+
+        fieldPos[i] = fieldPos[i].replace(">", "")
+        fieldPos[i] = fieldPos[i].replace("<", "")
+        fieldPos[i] = fieldPos[i].replace("/", "")
 
         toGo[i] = toGo[i].replace(">", "")
         toGo[i] = toGo[i].replace("<", "")
@@ -85,6 +89,8 @@ while(True):
                 punter[j] += " "
         if len(str(toGo[j])) == 1:
             toGo[j] = str(toGo[j]) + " "
+        if len(str(fieldPos[j])) == 5:
+            fieldPos[j] = str(fieldPos[j]) + " "
     
     j = 0
     for j in range(len(time)):
